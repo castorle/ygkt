@@ -1,0 +1,128 @@
+/* Define keyframes for rotating animation */
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+/* Basic body styling */
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Section styling */
+section {
+    background-color: #F2E8CF;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Header styling */
+header {
+    font-family: "Outfit", sans-serif;
+    background-color: #386641;
+    color: #F2E8CF;
+    text-shadow: 1px 1px 25px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Navigation bar styling */
+nav {
+    font-family: "Outfit", sans-serif;
+    background-color: #ffffff;
+}
+
+/* Unordered list styling */
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+/* List item styling */
+li {
+    width: 10vw;
+    transition: background-color 0.3s, width 0.5s;
+    text-align: center;
+    padding: 1vw;
+    color: #1d3622;
+}
+
+/* Anchor tag styling */
+a {
+    color: inherit;
+}
+
+/* List item hover effect */
+li:hover {
+    background-color: #333;
+    width: 15vw;
+}
+
+/* Anchor tag hover effect inside list item */
+li:hover a {
+    color: #F2E8CF;
+}
+
+/* Main content styling */
+main {
+    flex: 1;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Section padding and border radius */
+section {
+    padding: 2vw;
+    border-radius: 25px;
+}
+
+/* Image styling */
+img {
+    width: 50%;
+    height: auto;
+    border-radius: 25px;
+    margin: 2vw;
+    align-self: center;
+}
+
+/* Footer styling */
+footer {
+    font-family: "Poiret One", sans-serif;
+    background-color: #386641;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer anchor tag styling */
+footer a {
+    color: white;
+    padding: 0 1vw 0;
+}
