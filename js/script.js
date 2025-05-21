@@ -3,13 +3,13 @@ document.getElementById('btn').addEventListener('click', function() {
     // Crée un nouvel élément 'a'
     let shape = document.createElement('a');
     // Définit le texte de l'élément
-    shape.textContent = 'Oui';
+    shape.textContent = 'NON';
     // Définit la taille de la police
     shape.style.fontSize = '50px';
     // Définit le poids de la police
     shape.style.fontWeight = 'bold';
     // Définit la famille de la police
-    shape.style.fontFamily = "Outfit", "sans-serif";
+    shape.style.fontFamily = "Tiny5", "serif";
     // Définit la couleur du texte en utilisant une couleur hexadécimale aléatoire
     shape.style.color = generateRandomHexColor();
     // Définit la largeur de l'élément
@@ -78,3 +78,35 @@ function generateRandomHexColor() {
 document.getElementById('reset').addEventListener('click', function() {
     location.reload();
 });
+
+//ajoute une fonction qui fait apparaitre dans le "p" portant l'id "typewriter" un texte lettre par lettre puis le fait disparaitre lettre par lettre en boucle dès le chargement de la page
+
+// Fonction pour afficher et masquer le texte lettre par lettre
+function typewriterEffect() {
+    const element = document.getElementById('typewriter');
+    const text = element.textContent; // Remplacez par le texte souhaité
+    let index = text.length-1;
+    console.log(index);
+    let isAdding = true;
+
+    setInterval(() => {
+        if (isAdding) {
+            element.textContent += text[index];
+            index++;
+            if (index === text.length) {
+                isAdding = false;
+                index--;
+            }
+        } else {
+            element.textContent = element.textContent.slice(0, -1);
+            index--;
+            if (index < -1) {
+                isAdding = true;
+                index = 0;
+            }
+        }
+    }, 200); // Ajustez la vitesse de l'effet ici
+}
+
+// Appelle la fonction dès le chargement de la page
+window.onload = typewriterEffect;
